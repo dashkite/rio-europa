@@ -23,7 +23,7 @@ Events =
 
   start: ( machine, start ) ->
     Ks.peek ( handle ) ->
-      handle.state = state = Observable.from forward: [], back: []
+      handle.observable = state = Observable.from forward: [], back: []
       do ->
         handle.events = await Europa.start { state, machine }
         if start? then handle.events.enqueue start
