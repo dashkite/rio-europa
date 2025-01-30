@@ -22,12 +22,12 @@ Event =
 Events =
 
   start: ( machine, start ) ->
-    Ks.peek ( handle ) ->
-      handle.observable = state = Observable.from forward: [], back: []
+    Ks.push ( handle ) ->
+      state = Observable.from forward: [], back: []
       do ->
         handle.events = await Europa.start { state, machine }
         if start? then handle.events.enqueue start
       # avoid returning promise
-      return
+      state
 
 export { Event, Events }
