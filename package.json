@@ -44,6 +44,6 @@
     "@dashkite/europa": "link:../europa",
     "@dashkite/joy": "link:../joy",
     "@dashkite/katana": "^0.4.8",
-    "@dashkite/observable": "link:../observable"
+    "@dashkite/observable": "0.3.0"
   }
 }
